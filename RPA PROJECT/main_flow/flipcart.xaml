@@ -1,0 +1,183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="flipcart" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_product" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>860,1628.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>flipcart_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="flipcart" sap:VirtualizedContainerService.HintSize="592,1564" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="result_value" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="529.6,1452" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="67465b16-8d53-47e4-b084-654f20de5be8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1235.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'grouping'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="67465b16-8d53-47e4-b084-654f20de5be8" Text="[&quot;https://www.flipkart.com/&quot;+&quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="205, 72, 1497, 31" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - MANIKANDAN S (rajalakshmi.edu.in)' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - MANIKANDAN S (rajalakshmi.edu.in)' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="f171c5db-f98a-44a3-8c98-99a48a3bcdd5" InformativeScreenshot="4b3855324aed936360f54ba035e320b1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="159, 66, 1598, 43" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - MANIKANDAN S (rajalakshmi.edu.in)' role='pane' /&gt;&lt;ctrl idx='3' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - MANIKANDAN S (rajalakshmi.edu.in)' role='pane' /&gt;&lt;ctrl automationid='' role='grouping' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search Icon'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67465b16-8d53-47e4-b084-654f20de5be8" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/" DesignTimeRectangle="344, 199, 886, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='Pke_EE' aaname='Search for Products, Brands and More' /&gt;" Guid="58966b0b-62cf-4bc1-a34e-f48e6800e52c" InformativeScreenshot="7edb0753b94c17eef32e776fb9c80c6c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp;amp; More. Best Offers!' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="44, 197, 1186, 54" FriendlyName="'Search Icon'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div' parentid='container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='container' tag='DIV' class='_3ZqtNW' aaname='' check:text='Search Icon' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="67465b16-8d53-47e4-b084-654f20de5be8" Text="[in_product+&quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/" DesignTimeRectangle="344, 199, 886, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='Pke_EE' aaname='Search for Products, Brands and More' /&gt;" Guid="530439b8-1dcd-40a6-bc48-ce09a5eb8caf" InformativeScreenshot="3d940502cc344009e59b3ea29fcf1913.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp;amp; More. Best Offers!' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[result_value]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Newcolumn0' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Newcolumn1' ReferenceName='Column1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="67465b16-8d53-47e4-b084-654f20de5be8" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="9, 182, 1899, 10354" DesignTimeScaleFactor="1.25" FriendlyName="'Explore Plusiphone14Log…'" FullSelectorArgument="&lt;webctrl parentid='container' tag='DIV' /&gt;" Guid="d969852a-e3e5-4cce-8ef4-bffaa7128375" InformativeScreenshot="c9e732c9b255539f3ab69924732797d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Iphone14- Buy Products Online at Best Price in India - All Categories | Flipkart.com' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[variable1]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[result_value.Rows(0)("Newcolumn0").ToString()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[variable1]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="016dcb5f06c5824e7112043e5c623102.png" Selector="&lt;html app='chrome.exe' title='New Tab' /&gt;" Title="New Tab" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
